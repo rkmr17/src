@@ -74,7 +74,24 @@ public class CalculatorApp {
       // 計算結果を出力
       System.out.println("結果：" + result);
 
-
+      //ループを継続させるか選択する
+      System.out.println("続けて計算しますか？（y/n）");
+      boolean keepChoice = true;
+      while (keepChoice) {
+        String choice = scanner.next();
+        switch (choice) {
+          case "y":
+            keepChoice =false;
+            break;
+          case "n":
+            keepRanning = false;
+            keepChoice  = false;
+            break;
+          default:
+            System.out.println("yかnを入力してください");
+            break;
+        }
+      }
     }
 
   }
