@@ -27,51 +27,55 @@ public class CalculatorApp {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
+    boolean keepRanning = true;
     System.out.println("電卓アプリケーション");
 
-    // ユーザー入力処理
-    double num1;
-    double num2;
-    System.out.println("一つ目の数字を入力してください");
-    try {
-      num1 = scanner.nextDouble();
-    } catch (Exception e) {
-      System.out.println("無効な入力ですシステムを終了します");
-      return;
+    //任意のタイミングまでループする
+    while (keepRanning) {
+      // ユーザー入力処理
+      double num1;
+      double num2;
+      System.out.println("一つ目の数字を入力してください");
+      try {
+        num1 = scanner.nextDouble();
+      } catch (Exception e) {
+        System.out.println("無効な入力ですシステムを終了します");
+        return;
+      }
+
+      System.out.println("演算子を入力してください");
+      String operator = scanner.next();
+
+      System.out.println("二つ目の数字を入力してください");
+      try {
+        num2 = scanner.nextDouble();
+      } catch (Exception e) {
+        System.out.println("無効な入力ですシステムを終了します");
+        return;
+      }
+
+      // 入力された演算子別に対応したメソッドを呼び出す
+      double result = 0;
+      switch (operator) {
+        case "+":
+          result = add(num1, num2);
+          break;
+        case "-":
+          result = subtract(num1, num2);
+        case "*":
+          result = multiply(num1, num2);
+        case "/":
+          result = divide(num1, num2);
+        default:
+          System.out.println("無効な演算子です");
+          break;
+      }
+
+      // 計算結果を出力
+      System.out.println("結果：" + result);
+
+
     }
-
-    System.out.println("演算子を入力してください");
-    String operator = scanner.next();
-
-    System.out.println("二つ目の数字を入力してください");
-    try {
-      num2 = scanner.nextDouble();
-    } catch (Exception e) {
-      System.out.println("無効な入力ですシステムを終了します");
-      return;
-    }
-    
-
-    // 入力された演算子別に対応したメソッドを呼び出す
-    double result = 0;
-    switch (operator) {
-      case "+":
-        result = add(num1, num2);
-        break;
-      case "-":
-        result = subtract(num1, num2);
-      case "*":
-        result = multiply(num1, num2);
-      case "/":
-        result = divide(num1, num2);
-      default:
-        System.out.println("無効な演算子です");
-        break;
-    }
-
-    //計算結果を出力
-    System.out.println("結果：" + result);
-
 
   }
 
