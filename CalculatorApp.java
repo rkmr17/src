@@ -43,14 +43,14 @@ public class CalculatorApp {
     double result = 0;
     switch (operator) {
       case "+":
-        result = add(num2, result);
+        result = add(num1, num2);
         break;
       case "-":
-        result = subtract(num2, result);
+        result = subtract(num1, num2);
       case "*":
-        result = multiply(num2, result);
+        result = multiply(num1, num2);
       case "/":
-        result = divide(num2, result);
+        result = divide(num1, num2);
       default:
         System.out.println("無効な演算子です");
         break;
