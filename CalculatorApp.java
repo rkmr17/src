@@ -39,11 +39,11 @@ public class CalculatorApp {
     System.out.println("二つ目の数字を入力してください");
     double num2 = scanner.nextDouble();
 
-    //計算メソッド動作テスト
+    /*計算メソッド動作テスト
     System.out.println("加算：" + add     (num1, num2));
     System.out.println("減算：" + subtract(num1, num2));
     System.out.println("乗算：" + multiply(num1, num2));
-    System.out.println("除算：" + divide  (num1, num2));
+    System.out.println("除算：" + divide  (num1, num2));*/
   }
 
 }
