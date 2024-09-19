@@ -40,15 +40,9 @@ public class CalculatorApp {
     double num2 = scanner.nextDouble();
 
     //計算メソッド動作テスト
-    double num1 = 10;
-    double num2 = 5;
-
     System.out.println("加算：" + add     (num1, num2));
     System.out.println("減算：" + subtract(num1, num2));
     System.out.println("乗算：" + multiply(num1, num2));
-    System.out.println("除算：" + divide  (num1, num2));
-    
-    num2 = 0;
     System.out.println("除算：" + divide  (num1, num2));
   }
 
