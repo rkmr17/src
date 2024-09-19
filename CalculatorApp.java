@@ -25,6 +25,23 @@ public class CalculatorApp {
     return a / b;
   }
 
+  //数字入力メソッド
+  public static double getInput(Scanner scanner, String prompt) {
+    double num = 0;
+    boolean keepInput = false;
+    System.out.println(prompt);
+    while (!keepInput) {
+      try {
+        num = scanner.nextDouble();
+        keepInput = true;
+    } catch (Exception e) {
+        System.out.println("無効な入力です再度入力してください。");
+        scanner.next();
+    }
+    }
+    return num;
+  }
+
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     boolean keepRanning = true;
@@ -33,26 +50,12 @@ public class CalculatorApp {
     //任意のタイミングまでループする
     while (keepRanning) {
       // ユーザー入力処理
-      double num1;
-      double num2;
-      System.out.println("一つ目の数字を入力してください");
-      try {
-        num1 = scanner.nextDouble();
-      } catch (Exception e) {
-        System.out.println("無効な入力ですシステムを終了します");
-        return;
-      }
+      double num1 = getInput(scanner, "一つ目の数字を入力してください");
 
       System.out.println("演算子を入力してください");
       String operator = scanner.next();
 
-      System.out.println("二つ目の数字を入力してください");
-      try {
-        num2 = scanner.nextDouble();
-      } catch (Exception e) {
-        System.out.println("無効な入力ですシステムを終了します");
-        return;
-      }
+      double num2 = getInput(scanner, "二つ目の数字を入力してください");
 
       // 入力された演算子別に対応したメソッドを呼び出す
       double result = 0;
