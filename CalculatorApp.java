@@ -40,20 +40,24 @@ public class CalculatorApp {
     double num2 = scanner.nextDouble();
 
     // 入力された演算子別に対応したメソッドを呼び出す
+    double result = 0;
     switch (operator) {
       case "+":
-        System.out.println("加算：" + add(num1, num2));
+        result = add(num2, result);
         break;
       case "-":
-        System.out.println("減算：" + subtract(num1, num2));
+        result = subtract(num2, result);
       case "*":
-        System.out.println("乗算：" + multiply(num1, num2));
+        result = multiply(num2, result);
       case "/":
-        System.out.println("除算：" + divide(num1, num2));
+        result = divide(num2, result);
       default:
         System.out.println("無効な演算子です");
         break;
     }
+
+    //計算結果を出力
+    System.out.println("結果：" + result);
 
     /*
      * 計算メソッド動作テスト
