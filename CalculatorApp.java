@@ -59,13 +59,7 @@ public class CalculatorApp {
     //計算結果を出力
     System.out.println("結果：" + result);
 
-    /*
-     * 計算メソッド動作テスト
-     * System.out.println("加算：" + add (num1, num2));
-     * System.out.println("減算：" + subtract(num1, num2));
-     * System.out.println("乗算：" + multiply(num1, num2));
-     * System.out.println("除算：" + divide (num1, num2));
-     */
+
   }
 
 }
