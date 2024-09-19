@@ -30,14 +30,27 @@ public class CalculatorApp {
     System.out.println("test");
 
     // ユーザー入力処理
+    double num1;
+    double num2;
     System.out.println("一つ目の数字を入力してください");
-    double num1 = scanner.nextDouble();
+    try {
+      num1 = scanner.nextDouble();
+    } catch (Exception e) {
+      System.out.println("無効な入力ですシステムを終了します");
+      return;
+    }
 
     System.out.println("演算子を入力してください");
     String operator = scanner.next();
 
     System.out.println("二つ目の数字を入力してください");
-    double num2 = scanner.nextDouble();
+    try {
+      num2 = scanner.nextDouble();
+    } catch (Exception e) {
+      System.out.println("無効な入力ですシステムを終了します");
+      return;
+    }
+    
 
     // 入力された演算子別に対応したメソッドを呼び出す
     double result = 0;
