@@ -29,6 +29,16 @@ public class CalculatorApp {
     Scanner scanner = new Scanner(System.in);
     System.out.println("test");
 
+    //ユーザー入力処理
+    System.out.println("一つ目の数字を入力してください");
+    double num1 = scanner.nextDouble();
+
+    System.out.println("演算子を入力してください");
+    String operator = scanner.next();
+
+    System.out.println("二つ目の数字を入力してください");
+    double num2 = scanner.nextDouble();
+
     //計算メソッド動作テスト
     double num1 = 10;
     double num2 = 5;
