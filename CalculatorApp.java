@@ -26,6 +26,7 @@ public class CalculatorApp {
   }
 
   public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
     System.out.println("test");
 
     //計算メソッド動作テスト
