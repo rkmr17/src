@@ -27,7 +27,7 @@ public class CalculatorApp {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
-    System.out.println("test");
+    System.out.println("電卓アプリケーション");
 
     // ユーザー入力処理
     double num1;
