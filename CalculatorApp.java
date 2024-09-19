@@ -25,7 +25,7 @@ public class CalculatorApp {
     return a / b;
   }
 
-  //数字入力メソッド
+  // 数字入力メソッド
   public static double getInput(Scanner scanner, String prompt) {
     double num = 0;
     boolean keepInput = false;
@@ -34,10 +34,10 @@ public class CalculatorApp {
       try {
         num = scanner.nextDouble();
         keepInput = true;
-    } catch (Exception e) {
+      } catch (Exception e) {
         System.out.println("無効な入力です再度入力してください。");
         scanner.next();
-    }
+      }
     }
     return num;
   }
@@ -47,7 +47,7 @@ public class CalculatorApp {
     boolean keepRanning = true;
     System.out.println("電卓アプリケーション");
 
-    //任意のタイミングまでループする
+    // 任意のタイミングまでループする
     while (keepRanning) {
       // ユーザー入力処理
       double num1 = getInput(scanner, "一つ目の数字を入力してください");
@@ -77,18 +77,18 @@ public class CalculatorApp {
       // 計算結果を出力
       System.out.println("結果：" + result);
 
-      //ループを継続させるか選択する
+      // ループを継続させるか選択する
       System.out.println("続けて計算しますか？（y/n）");
       boolean keepChoice = true;
       while (keepChoice) {
         String choice = scanner.next();
         switch (choice) {
           case "y":
-            keepChoice =false;
+            keepChoice = false;
             break;
           case "n":
             keepRanning = false;
-            keepChoice  = false;
+            keepChoice = false;
             break;
           default:
             System.out.println("yかnを入力してください");
