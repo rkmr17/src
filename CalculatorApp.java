@@ -39,6 +39,22 @@ public class CalculatorApp {
     System.out.println("二つ目の数字を入力してください");
     double num2 = scanner.nextDouble();
 
+    // 入力された演算子別に対応したメソッドを呼び出す
+    switch (operator) {
+      case "+":
+        System.out.println("加算：" + add(num1, num2));
+        break;
+      case "-":
+        System.out.println("減算：" + subtract(num1, num2));
+      case "*":
+        System.out.println("乗算：" + multiply(num1, num2));
+      case "/":
+        System.out.println("除算：" + divide(num1, num2));
+      default:
+        System.out.println("無効な演算子です");
+        break;
+    }
+
     /*
      * 計算メソッド動作テスト
      * System.out.println("加算：" + add (num1, num2));
