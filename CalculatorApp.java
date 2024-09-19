@@ -1,3 +1,5 @@
+import  java.util.Scanner;
+
 public class CalculatorApp {
   //加算メソッド
   public static double add(double a, double b) {
